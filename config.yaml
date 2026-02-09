@@ -1,0 +1,51 @@
+# Model Configuration
+model:
+  name: "google/gemma-2b-it"
+  max_length: 512
+  
+# Quantization Configuration
+quantization:
+  load_in_4bit: true
+  bnb_4bit_compute_dtype: "float16"
+  bnb_4bit_quant_type: "nf4"
+  bnb_4bit_use_double_quant: true
+
+# LoRA Configuration
+lora:
+  r: 16  # Rank
+  lora_alpha: 32
+  target_modules:
+    - "q_proj"
+    - "k_proj"
+    - "v_proj"
+    - "o_proj"
+    - "gate_proj"
+    - "up_proj"
+    - "down_proj"
+  lora_dropout: 0.05
+  bias: "none"
+  task_type: "CAUSAL_LM"
+
+# Training Configuration
+training:
+  dataset_path: "data/911_calls.jsonl"
+  output_dir: "outputs"
+  num_train_epochs: 3
+  per_device_train_batch_size: 1
+  gradient_accumulation_steps: 4
+  learning_rate: 2.0e-4
+  warmup_steps: 100
+  logging_steps: 10
+  save_steps: 100
+  max_steps: -1
+  fp16: false
+  bf16: false
+  optim: "paged_adamw_32bit"
+  gradient_checkpointing: true
+  max_grad_norm: 0.3
+  
+# Dataset Configuration
+dataset:
+  train_split: 0.9
+  seed: 42
+  max_samples: 518  # Total number of 911 call transcripts
