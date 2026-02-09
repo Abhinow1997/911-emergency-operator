@@ -8,7 +8,7 @@ A fine-tuned AI model that simulates professional 911 emergency dispatcher commu
 
 ## 🔗 Links
 
-- **[Live Demo (HuggingFace Space)](https://huggingface.co/spaces/Dotbix/AI-911-Emergency-Operator)**
+- **[Live Demo(HuggingFace Space)](https://huggingface.co/spaces/Dotbix/911-emergency-operator)**
 - **[Video Walkthrough](https://drive.google.com/file/d/1FQ6lCXb9tbL2G1zK9_FgRDp74JINQ1Pu/view?usp=sharing)**
 - **[AI Explainer Video](https://drive.google.com/file/d/1P-0IF3yioxr7nw6lB_v2kOPKeOcc0XOt/view?usp=sharing)**
 
