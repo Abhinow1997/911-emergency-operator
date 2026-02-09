@@ -199,8 +199,8 @@ def create_sample_dataset(output_path: str = "data/911_calls.jsonl"):
     # Sample 911 call transcripts
     sample_calls = [
         {
-            "caller": "911, what's your emergency?",
-            "dispatcher": "There's been a car accident on Highway 101 near exit 25. Two cars are involved.",
+            "caller": "There's been a car accident on Highway 101 near exit 25. Two cars are involved.",
+            "dispatcher": "I'm dispatching emergency services to Highway 101, exit 25 now. Can you describe the injuries? Is anyone unconscious?",
             "emergency_type": "traffic_accident",
             "location": "Highway 101, Exit 25"
         },
